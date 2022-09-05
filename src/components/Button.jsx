@@ -1,4 +1,4 @@
-function Button({ img, number }) {
+function Button({ img, number, onClick }) {
   return (
     <div
       style={{
@@ -11,6 +11,7 @@ function Button({ img, number }) {
         alignItems: "center",
         justifyContent: "center",
       }}
+      onClick={onClick}
     >
       <img alt={number} src={img} width={"auto"} height={"90%"} />
     </div>

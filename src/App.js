@@ -1,17 +1,12 @@
 import Button from "./components/Button";
 
-import one from "./assets/1.png";
-import two from "./assets/2.png";
-import three from "./assets/3.png";
-import four from "./assets/4.png";
-import five from "./assets/5.png";
-import six from "./assets/6.png";
-import macabi from "./assets/macabi.png";
 import information from "./information";
-import { useState } from "react";
+// import { useState } from "react";
 
 function App() {
-  const [question, setQuestion] = useState(0);
+  // const [question, setQuestion] = useState(0);
+  const question = 0;
+
   return (
     <div
       style={{
@@ -35,7 +30,14 @@ function App() {
         {information[question]
           .filter((value) => value.id < 5)
           .map((answer) => (
-            <Button img={answer.img} number={answer.id} />
+            <Button
+              key={answer.id}
+              img={answer.img}
+              number={answer.id}
+              onClick={() => {
+                console.log("hello");
+              }}
+            />
           ))}
       </div>
       <div
@@ -51,7 +53,14 @@ function App() {
         {information[question]
           .filter((value) => value.id > 4)
           .map((answer) => (
-            <Button img={answer.img} number={answer.id} />
+            <Button
+              key={answer.id}
+              img={answer.img}
+              number={answer.id}
+              onClick={() => {
+                console.log("hello");
+              }}
+            />
           ))}
       </div>
     </div>
