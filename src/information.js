@@ -1,5 +1,5 @@
-const information = {
-  Q1: {
+const information = [
+  {
     1: {
       id: 1,
       img: require("./assets/1.png"),
@@ -31,6 +31,6 @@ const information = {
       answer: "Respuesta 6",
     },
   },
-};
+];
 
 export default information;

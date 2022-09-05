@@ -7,6 +7,7 @@ import four from "./assets/4.png";
 import five from "./assets/5.png";
 import six from "./assets/6.png";
 import macabi from "./assets/macabi.png";
+import information from "./information";
 
 function App() {
   return (
@@ -49,6 +50,10 @@ function App() {
         <Button img={macabi} number={"macabi1"} />
         <Button img={macabi} number={"macabi2"} />
       </div>
+      {information.map((answer) => {
+        answer.map((a) => console.log(a));
+        return 0;
+      })}
     </div>
   );
 }
