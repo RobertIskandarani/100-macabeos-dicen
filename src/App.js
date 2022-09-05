@@ -7,7 +7,6 @@ import four from "./assets/4.png";
 import five from "./assets/5.png";
 import six from "./assets/6.png";
 import macabi from "./assets/macabi.png";
-import answers from "./information";
 
 function App() {
   return (
