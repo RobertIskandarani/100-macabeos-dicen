@@ -8,8 +8,10 @@ import five from "./assets/5.png";
 import six from "./assets/6.png";
 import macabi from "./assets/macabi.png";
 import information from "./information";
+import { useState } from "react";
 
 function App() {
+  const [question, setQuestion] = useState(0);
   return (
     <div
       style={{
@@ -30,10 +32,11 @@ function App() {
           justifyContent: "space-evenly",
         }}
       >
-        <Button img={one} number={1} />
-        <Button img={two} number={2} />
-        <Button img={three} number={3} />
-        <Button img={four} number={4} />
+        {information[question]
+          .filter((value) => value.id < 5)
+          .map((answer) => (
+            <Button img={answer.img} number={answer.id} />
+          ))}
       </div>
       <div
         style={{
@@ -45,15 +48,12 @@ function App() {
           justifyContent: "space-evenly",
         }}
       >
-        <Button img={five} number={5} />
-        <Button img={six} number={6} />
-        <Button img={macabi} number={"macabi1"} />
-        <Button img={macabi} number={"macabi2"} />
+        {information[question]
+          .filter((value) => value.id > 4)
+          .map((answer) => (
+            <Button img={answer.img} number={answer.id} />
+          ))}
       </div>
-      {information.map((answer) => {
-        answer.map((a) => console.log(a));
-        return 0;
-      })}
     </div>
   );
 }
