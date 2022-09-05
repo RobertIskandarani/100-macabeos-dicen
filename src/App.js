@@ -1,23 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "./components/Button";
+
+import one from "./assets/1.png";
+import two from "./assets/2.png";
+import three from "./assets/3.png";
+import four from "./assets/4.png";
+import five from "./assets/5.png";
+import six from "./assets/6.png";
+import macabi from "./assets/macabi.png";
+import answers from "./information";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        height: "100vh",
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-evenly",
+      }}
+    >
+      <div
+        style={{
+          height: "100%",
+          width: "45%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <Button img={one} number={1} />
+        <Button img={two} number={2} />
+        <Button img={three} number={3} />
+        <Button img={four} number={4} />
+      </div>
+      <div
+        style={{
+          height: "100%",
+          width: "45%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <Button img={five} number={5} />
+        <Button img={six} number={6} />
+        <Button img={macabi} number={"macabi1"} />
+        <Button img={macabi} number={"macabi2"} />
+      </div>
     </div>
   );
 }
