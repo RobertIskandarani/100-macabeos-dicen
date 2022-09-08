@@ -30,14 +30,7 @@ function App() {
         {information[question].answers
           .filter((value) => value.id < 5)
           .map((answer) => (
-            <Button
-              key={answer.id}
-              img={answer.img}
-              number={answer.id}
-              onClick={() => {
-                console.log("hello");
-              }}
-            />
+            <Button key={answer.id} answer={answer} />
           ))}
       </div>
       <div
@@ -53,14 +46,7 @@ function App() {
         {information[question].answers
           .filter((value) => value.id > 4)
           .map((answer) => (
-            <Button
-              key={answer.id}
-              img={answer.img}
-              number={answer.id}
-              onClick={() => {
-                console.log("hello");
-              }}
-            />
+            <Button key={answer.id} answer={answer} />
           ))}
         <div
           style={{
