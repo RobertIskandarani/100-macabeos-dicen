@@ -27,7 +27,7 @@ function App() {
           justifyContent: "space-evenly",
         }}
       >
-        {information[question]
+        {information[question].answers
           .filter((value) => value.id < 5)
           .map((answer) => (
             <Button
@@ -50,7 +50,7 @@ function App() {
           justifyContent: "space-evenly",
         }}
       >
-        {information[question]
+        {information[question].answers
           .filter((value) => value.id > 4)
           .map((answer) => (
             <Button
@@ -62,6 +62,24 @@ function App() {
               }}
             />
           ))}
+        <div
+          style={{
+            height: "38%",
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgb(2, 66, 137)",
+            borderRadius: 50,
+            border: "4px solid white",
+            color: "white",
+            fontSize: 32,
+            fontFamily: "Arial",
+          }}
+        >
+          {information[question].question}
+        </div>
       </div>
     </div>
   );

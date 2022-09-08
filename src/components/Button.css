@@ -1,0 +1,14 @@
+.button {
+  height: 15%;
+  width: 100%;
+  background-color: rgb(2, 66, 137);
+  border-radius: 50px;
+  border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: rgb(2, 66, 170);
+}
