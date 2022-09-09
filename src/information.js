@@ -81,6 +81,47 @@ const information = [
       },
     ],
   },
+  {
+    question: "Pregunta 3",
+    answers: [
+      {
+        id: 1,
+        img: require("./assets/1.png"),
+        answer: "Respuesta 1 P3",
+        count: 52,
+      },
+      {
+        id: 2,
+        img: require("./assets/2.png"),
+        answer: "Respuesta 2 P3",
+        count: 28,
+      },
+      {
+        id: 3,
+        img: require("./assets/3.png"),
+        answer: "Respuesta 3 P3",
+        count: 13,
+      },
+      {
+        id: 4,
+        img: require("./assets/4.png"),
+        answer: "Respuesta 4 P3",
+        count: 7,
+      },
+      {
+        id: 5,
+        img: require("./assets/macabi.png"),
+        answer: "",
+        count: 0,
+      },
+      {
+        id: 6,
+        img: require("./assets/macabi.png"),
+        answer: "",
+        count: 0,
+      },
+    ],
+  },
 ];
 
 export default information;
