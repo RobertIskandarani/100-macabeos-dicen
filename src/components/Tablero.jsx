@@ -84,7 +84,7 @@ function Tablero({ question, counter, questionNumber, setQuestion, lenght }) {
           onClick={() => {
             questionNumber === lenght - 1
               ? setQuestion(lenght - 1)
-              : setQuestion(questionNumber - 1);
+              : setQuestion(questionNumber + 1);
           }}
         >
           <IoIosArrowForward size={32} color="rgb(2, 66, 137)" />

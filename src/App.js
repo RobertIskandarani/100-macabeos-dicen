@@ -2,11 +2,17 @@ import Button from "./components/Button";
 import Tablero from "./components/Tablero";
 
 import information from "./information";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [question, setQuestion] = useState(0);
   const [counter, setCounter] = useState(0);
+  const [questions, setQuestions] = useState(information[0]);
+
+  useEffect(() => {
+    setQuestions(information[question]);
+    setCounter(0);
+  }, [question]);
 
   return (
     <div
@@ -28,7 +34,7 @@ function App() {
           justifyContent: "space-evenly",
         }}
       >
-        {information[question].answers
+        {questions.answers
           .filter((value) => value.id < 5)
           .map((answer) => (
             <Button
@@ -48,7 +54,7 @@ function App() {
           justifyContent: "space-evenly",
         }}
       >
-        {information[question].answers
+        {questions.answers
           .filter((value) => value.id > 4)
           .map((answer) => (
             <Button
@@ -63,7 +69,7 @@ function App() {
           setQuestion={setQuestion}
           questionNumber={question}
           counter={counter}
-          question={information[question].question}
+          question={questions.question}
         />
       </div>
     </div>
