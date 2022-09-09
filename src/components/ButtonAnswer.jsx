@@ -26,7 +26,7 @@ function ButtonAnswer({ answer }) {
           borderBottomRightRadius: 42,
           color: "rgb(2, 66, 137)",
           fontWeight: "bold",
-          fontSize: 32,
+          fontSize: 40,
         }}
       >
         {answer.count}

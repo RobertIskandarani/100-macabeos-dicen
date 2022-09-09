@@ -1,11 +1,12 @@
 import Button from "./components/Button";
+import Tablero from "./components/Tablero";
 
 import information from "./information";
-// import { useState } from "react";
+import { useState } from "react";
 
 function App() {
-  // const [question, setQuestion] = useState(0);
-  const question = 0;
+  const [question, setQuestion] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   return (
     <div
@@ -30,7 +31,11 @@ function App() {
         {information[question].answers
           .filter((value) => value.id < 5)
           .map((answer) => (
-            <Button key={answer.id} answer={answer} />
+            <Button
+              key={answer.id}
+              answer={answer}
+              setCounter={() => setCounter(counter + answer.count)}
+            />
           ))}
       </div>
       <div
@@ -46,26 +51,20 @@ function App() {
         {information[question].answers
           .filter((value) => value.id > 4)
           .map((answer) => (
-            <Button key={answer.id} answer={answer} />
+            <Button
+              key={answer.id}
+              answer={answer}
+              setCounter={() => setCounter(counter + answer.count)}
+            />
           ))}
-        <div
-          style={{
-            height: "38%",
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "rgb(2, 66, 137)",
-            borderRadius: 50,
-            border: "4px solid white",
-            color: "white",
-            fontSize: 32,
-            fontFamily: "Arial",
-          }}
-        >
-          {information[question].question}
-        </div>
+
+        <Tablero
+          lenght={information.length}
+          setQuestion={setQuestion}
+          questionNumber={question}
+          counter={counter}
+          question={information[question].question}
+        />
       </div>
     </div>
   );
