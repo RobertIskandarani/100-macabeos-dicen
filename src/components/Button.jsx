@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 import "./Button.css";
 import ButtonAnswer from "./ButtonAnswer";
+import audio from "./../assets/boton.mp3";
 
 function Button({ answer, setCounter }) {
+  let music = new Audio(audio);
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -21,6 +23,7 @@ function Button({ answer, setCounter }) {
       className="button"
       onClick={() => {
         setCounter();
+        music.play();
         setShow(true);
       }}
     >
