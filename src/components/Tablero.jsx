@@ -1,4 +1,5 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import logoMacabi from "./../assets/logoMacabi.png";
 
 function Tablero({ question, counter, questionNumber, setQuestion, lenght }) {
   return (
@@ -18,7 +19,21 @@ function Tablero({ question, counter, questionNumber, setQuestion, lenght }) {
       <div
         style={{
           width: "100%",
-          height: "70%",
+          height: "20%",
+          backgroundColor: "white",
+          borderTopLeftRadius: 42,
+          borderTopRightRadius: 42,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <img alt="logoMacabi" src={logoMacabi} height={"100%"} width={"auto"} />
+      </div>
+      <div
+        style={{
+          width: "100%",
+          height: "60%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -32,7 +47,7 @@ function Tablero({ question, counter, questionNumber, setQuestion, lenght }) {
       <div
         style={{
           width: "100%",
-          height: "30%",
+          height: "20%",
           display: "flex",
           flexDirection: "row",
           borderTop: "2px solid white",
