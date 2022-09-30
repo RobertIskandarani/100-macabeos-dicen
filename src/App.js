@@ -99,6 +99,7 @@ function App() {
           color: "rgb(2, 66, 137)",
           fontFamily: "Arial",
           fontSize: 25,
+          cursor: "pointer",
         }}
       >
         {wrong}
@@ -107,12 +108,14 @@ function App() {
           size={30}
           color="rgb(2, 66, 137)"
           onClick={() => {
-            setWrong(wrong + 1);
-            error.play();
-            setToggleWrong(true);
-            setTimeout(() => {
-              setToggleWrong(false);
-            }, 1000);
+            if (wrong < 3) {
+              setWrong(wrong + 1);
+              error.play();
+              setToggleWrong(true);
+              setTimeout(() => {
+                setToggleWrong(false);
+              }, 1000);
+            }
           }}
         />
       </div>

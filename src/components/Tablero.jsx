@@ -40,9 +40,10 @@ function Tablero({ question, counter, questionNumber, setQuestion, lenght }) {
           color: "white",
           fontSize: 32,
           fontFamily: "Arial",
+          textAlign: "center",
         }}
       >
-        {question}
+        <div style={{ width: "90%" }}>{question}</div>
       </div>
       <div
         style={{
@@ -62,6 +63,7 @@ function Tablero({ question, counter, questionNumber, setQuestion, lenght }) {
             alignItems: "center",
             justifyContent: "center",
             borderBottomLeftRadius: 42,
+            cursor: "pointer",
           }}
           onClick={() => {
             questionNumber === 0
@@ -95,6 +97,7 @@ function Tablero({ question, counter, questionNumber, setQuestion, lenght }) {
             alignItems: "center",
             justifyContent: "center",
             borderBottomRightRadius: 42,
+            cursor: "pointer",
           }}
           onClick={() => {
             questionNumber === lenght - 1
