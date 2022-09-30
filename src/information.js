@@ -166,7 +166,7 @@ const information = [
     ],
   },
   {
-    question: "un deseo para todo Macabi en este año que comienza.",
+    question: "Un deseo para todo Macabi en este año que comienza.",
     answers: [
       {
         id: 1,
