@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/100-MACABEOS-DICEN/static/css/main.3246451d.css",
+    "main.js": "/100-MACABEOS-DICEN/static/js/main.7143facd.js",
+    "static/media/fondo.png": "/100-MACABEOS-DICEN/static/media/fondo.4e130bc6420e49fccc56.png",
+    "static/media/error.mp3": "/100-MACABEOS-DICEN/static/media/error.856ae97f46a7615e6045.mp3",
+    "static/media/macabi.png": "/100-MACABEOS-DICEN/static/media/macabi.487b88bbee687d03d3fa.png",
+    "static/media/logoMacabi.png": "/100-MACABEOS-DICEN/static/media/logoMacabi.2590672980c53aa5e0c3.png",
+    "static/media/boton.mp3": "/100-MACABEOS-DICEN/static/media/boton.3e764aba2a34450b0a9e.mp3",
+    "index.html": "/100-MACABEOS-DICEN/index.html",
+    "main.3246451d.css.map": "/100-MACABEOS-DICEN/static/css/main.3246451d.css.map",
+    "main.7143facd.js.map": "/100-MACABEOS-DICEN/static/js/main.7143facd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3246451d.css",
+    "static/js/main.7143facd.js"
+  ]
+}
